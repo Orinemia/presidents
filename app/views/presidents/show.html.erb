@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Presidentnumber:</strong>
+  <%= @president.presidentNumber %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @president.name %>
+</p>
+
+<p>
+  <strong>Biography:</strong>
+  <%= @president.biography %>
+</p>
+
+<p>
+  <strong>Termstart:</strong>
+  <%= @president.termStart %>
+</p>
+
+<p>
+  <strong>Termend:</strong>
+  <%= @president.termEnd %>
+</p>
+
+<p>
+  <strong>Partyaffiliation:</strong>
+  <%= @president.partyAffiliation %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @president.picture %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @president.state %>
+</p>
+
+<p>
+  <strong>Term:</strong>
+  <%= @president.term %>
+</p>
+
+<%= link_to 'Edit', edit_president_path(@president) %> |
+<%= link_to 'Back', presidents_path %>
