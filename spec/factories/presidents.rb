@@ -2,14 +2,14 @@
 
 FactoryGirl.define do
   factory :president do
-    presidentNumber 1
-    name "MyString"
-    biography "MyText"
-    termStart "MyString"
-    termEnd "MyString"
-    partyAffiliation "MyString"
+    presidency "MyString"
+    president "MyString"
+    took_office "MyString"
+    left_office "MyString"
+    party "MyString"
     picture "MyString"
     state "MyString"
-    term 1
+    term "MyString"
+    biography "MyText"
   end
 end

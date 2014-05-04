@@ -1,33 +1,28 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Presidentnumber:</strong>
-  <%= @president.presidentNumber %>
+  <strong>Presidency:</strong>
+  <%= @president.presidency %>
 </p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @president.name %>
+  <strong>President:</strong>
+  <%= @president.president %>
 </p>
 
 <p>
-  <strong>Biography:</strong>
-  <%= @president.biography %>
+  <strong>Took office:</strong>
+  <%= @president.took_office %>
 </p>
 
 <p>
-  <strong>Termstart:</strong>
-  <%= @president.termStart %>
+  <strong>Left office:</strong>
+  <%= @president.left_office %>
 </p>
 
 <p>
-  <strong>Termend:</strong>
-  <%= @president.termEnd %>
-</p>
-
-<p>
-  <strong>Partyaffiliation:</strong>
-  <%= @president.partyAffiliation %>
+  <strong>Party:</strong>
+  <%= @president.party %>
 </p>
 
 <p>
@@ -45,5 +40,10 @@
   <%= @president.term %>
 </p>
 
-<%= link_to 'Edit', edit_president_path(@president) %> |
+<p>
+  <strong>Biography:</strong>
+  <%= @president.biography %>
+</p>
+
+
 <%= link_to 'Back', presidents_path %>

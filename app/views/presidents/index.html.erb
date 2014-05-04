@@ -3,36 +3,31 @@
 <table>
   <thead>
     <tr>
-      <th>Presidentnumber</th>
-      <th>Name</th>
-      <th>Biography</th>
-      <th>Termstart</th>
-      <th>Termend</th>
-      <th>Partyaffiliation</th>
+      <th>Presidency</th>
+      <th>President</th>
+      <th>Took office</th>
+      <th>Left office</th>
+      <th>Party</th>
       <th>Picture</th>
       <th>State</th>
       <th>Term</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Biography</th>
     </tr>
   </thead>
 
   <tbody>
     <% @presidents.each do |president| %>
       <tr>
-        <td><%= president.presidentNumber %></td>
-        <td><%= president.name %></td>
-        <td><%= president.biography %></td>
-        <td><%= president.termStart %></td>
-        <td><%= president.termEnd %></td>
-        <td><%= president.partyAffiliation %></td>
+        <td><%= president.presidency %></td>
+        <td><%= president.president %></td>
+        <td><%= president.took_office %></td>
+        <td><%= president.left_office %></td>
+        <td><%= president.party %></td>
         <td><%= president.picture %></td>
         <td><%= president.state %></td>
         <td><%= president.term %></td>
+        <td><%= president.biography %></td>
         <td><%= link_to 'Show', president %></td>
-        <td><%= link_to 'Edit', edit_president_path(president) %></td>
-        <td><%= link_to 'Destroy', president, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

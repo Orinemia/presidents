@@ -69,6 +69,6 @@ class PresidentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def president_params
-      params.require(:president).permit(:presidentNumber, :name, :biography, :termStart, :termEnd, :partyAffiliation, :picture, :state, :term)
+      params.require(:president).permit(:presidency, :president, :took_office, :left_office, :party, :picture, :state, :term, :biography)
     end
 end

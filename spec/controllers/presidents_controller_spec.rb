@@ -23,7 +23,7 @@ describe PresidentsController do
   # This should return the minimal set of attributes required to create a valid
   # President. As you add validations to President, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "presidentNumber" => "1" } }
+  let(:valid_attributes) { { "presidency" => "MyString" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
@@ -85,14 +85,14 @@ describe PresidentsController do
       it "assigns a newly created but unsaved president as @president" do
         # Trigger the behavior that occurs when invalid params are submitted
         President.any_instance.stub(:save).and_return(false)
-        post :create, {:president => { "presidentNumber" => "invalid value" }}, valid_session
+        post :create, {:president => { "presidency" => "invalid value" }}, valid_session
         assigns(:president).should be_a_new(President)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         President.any_instance.stub(:save).and_return(false)
-        post :create, {:president => { "presidentNumber" => "invalid value" }}, valid_session
+        post :create, {:president => { "presidency" => "invalid value" }}, valid_session
         response.should render_template("new")
       end
     end
@@ -106,8 +106,8 @@ describe PresidentsController do
         # specifies that the President created on the previous line
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
-        President.any_instance.should_receive(:update).with({ "presidentNumber" => "1" })
-        put :update, {:id => president.to_param, :president => { "presidentNumber" => "1" }}, valid_session
+        President.any_instance.should_receive(:update).with({ "presidency" => "MyString" })
+        put :update, {:id => president.to_param, :president => { "presidency" => "MyString" }}, valid_session
       end
 
       it "assigns the requested president as @president" do
@@ -128,7 +128,7 @@ describe PresidentsController do
         president = President.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         President.any_instance.stub(:save).and_return(false)
-        put :update, {:id => president.to_param, :president => { "presidentNumber" => "invalid value" }}, valid_session
+        put :update, {:id => president.to_param, :president => { "presidency" => "invalid value" }}, valid_session
         assigns(:president).should eq(president)
       end
 
@@ -136,7 +136,7 @@ describe PresidentsController do
         president = President.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         President.any_instance.stub(:save).and_return(false)
-        put :update, {:id => president.to_param, :president => { "presidentNumber" => "invalid value" }}, valid_session
+        put :update, {:id => president.to_param, :president => { "presidency" => "invalid value" }}, valid_session
         response.should render_template("edit")
       end
     end
