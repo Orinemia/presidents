@@ -23,43 +23,7 @@ class PresidentsController < ApplicationController
 
   # POST /presidents
   # POST /presidents.json
-  def create
-    @president = President.new(president_params)
-
-    respond_to do |format|
-      if @president.save
-        format.html { redirect_to @president, notice: 'President was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @president }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @president.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /presidents/1
-  # PATCH/PUT /presidents/1.json
-  def update
-    respond_to do |format|
-      if @president.update(president_params)
-        format.html { redirect_to @president, notice: 'President was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @president.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /presidents/1
-  # DELETE /presidents/1.json
-  def destroy
-    @president.destroy
-    respond_to do |format|
-      format.html { redirect_to presidents_url }
-      format.json { head :no_content }
-    end
-  end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
